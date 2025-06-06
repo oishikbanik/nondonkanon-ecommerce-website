@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NondonKanon - Category Products</title>
+
+    <link rel="shortcut icon" href="./favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Header section (same as index.html) -->
+    <header class="header" data-header>
+        <div class="container">
+            <div class="overlay" data-overlay></div>
+
+            <div class="header-search">
+                <input type="search" name="search" placeholder="Search Product..." class="input-field">
+                <button class="search-btn" aria-label="Search">
+                    <ion-icon name="search-outline"></ion-icon>
+                </button>
+            </div>
+
+            <a href="#" class="logo">
+                <img src="./readme-images/logo.jpg" alt="NondonKanon logo" width="130">
+            </a>
+
+            <div class="header-actions">
+                <button class="header-action-btn" data-action="account">
+                    <ion-icon name="person-outline" aria-hidden="true"></ion-icon>
+                    <p class="header-action-label">Sign in</p>
+                </button>
+
+                <button class="header-action-btn" data-action="search">
+                    <ion-icon name="search-outline" aria-hidden="true"></ion-icon>
+                    <p class="header-action-label">Search</p>
+                </button>
+
+                <button class="header-action-btn" data-action="cart">
+                    <ion-icon name="cart-outline" aria-hidden="true"></ion-icon>
+                    <p class="header-action-label">Cart</p>
+                    <div class="btn-badge green" aria-hidden="true">0</div>
+                </button>
+
+                <button class="header-action-btn" data-action="wishlist">
+                    <ion-icon name="heart-outline" aria-hidden="true"></ion-icon>
+                    <p class="header-action-label">Wishlist</p>
+                    <div class="btn-badge" aria-hidden="true">0</div>
+                </button>
+            </div>
+
+            <button class="nav-open-btn" data-nav-open-btn aria-label="Open Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="navbar" data-navbar>
+                <div class="navbar-top">
+                    <a href="#" class="logo">
+                        <img src="./readme-images/logo.jpg" alt="NondonKanon logo" width="130">
+                    </a>
+
+                    <button class="nav-close-btn" data-nav-close-btn aria-label="Close Menu">
+                        <ion-icon name="close-outline"></ion-icon>
+                    </button>
+                </div>
+
+                <ul class="navbar-list">
+                    <li>
+                        <a href="index.html" class="navbar-link">Home</a>
+                    </li>
+                    <li>
+                        <a href="category.html" class="navbar-link">Shop</a>
+                    </li>
+                    <li>
+                        <a href="contact.html" class="navbar-link">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="section category-products">
+            <div class="container">
+                <h2 class="h2 section-title" id="category-title">Category Products</h2>
+
+                <div class="filter-section">
+                    <div class="sort-filter">
+                        <label for="sort">Sort by:</label>
+                        <select id="sort" class="sort-select">
+                            <option value="newest">Newest</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="popular">Most Popular</option>
+                        </select>
+                    </div>
+
+                    <div class="filters">
+                        <button class="filter-btn active" data-filter="all">All</button>
+                        <button class="filter-btn" data-filter="in-stock">In Stock</button>
+                        <button class="filter-btn" data-filter="sale">Sale</button>
+                    </div>
+                </div>
+
+                <ul class="product-list" id="category-products">
+                    <!-- Products will be dynamically added here -->
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer section (same as index.html) -->
+    <footer class="footer">
+        <!-- ... (copy footer content from index.html) ... -->
+    </footer>
+
+    <script src="./assets/js/script.js"></script>
+    <script src="./assets/js/header.js"></script>
+    <script src="./assets/js/category.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+
+</html>
