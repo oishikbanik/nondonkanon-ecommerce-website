@@ -148,12 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function renderProducts(productsList) {
     const productList = document.getElementById('category-products');
-    productList.innerHTML = '';
-
-    productsList.forEach(product => {
+    productList.innerHTML = '';    productsList.forEach(product => {
+        // Ensure each product has a unique ID
+        if (!product.id) {
+            product.id = Math.random().toString(36).substr(2, 9);
+        }
+        
         const productHTML = `
             <li>
-                <div class="product-card">
+                <div class="product-card" data-product-id="${product.id}">
                     <figure class="card-banner">
                         <a href="#">
                             <img src="${product.image}" alt="${product.name}" loading="lazy" width="800" height="1034" class="w-100">
